@@ -27,35 +27,4 @@ func FetchAllBooks() ([]models.Book, error) {
 
 
 
-// var (
-// 	ErrWrongCreds = errors.New("invalid email or password")
-// 	ErrWrongToken = errors.New("invalid token")
-// )
-
-// func FetchUserByEmail(email string) (*models.User, error) {
-// 	var user models.User
-// 	err := utils.DB.Where("email =?", email).First(&user).Error
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	return &user, nil
-// }
-// func FetchUserById(id string) (*models.User, error) {
-// 	var user models.User
-// 	err := utils.DB.Where("id =?", id).First(&user).Error
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	return &user, nil
-// }
-// func FetchUserByAuthToken(jwt string) (*models.User, error) {
-// 	userId, err := utils.ValidateJWTForAuthId(jwt)
-// 	if err != nil {
-// 		return nil, ErrWrongToken
-// 	}
-// 	return FetchUserById(userId)
-// }
-
-
-
 
