@@ -1,0 +1,87 @@
+directive @goField(
+  forceResolver: Boolean
+  name: String
+) on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
+
+scalar Time
+
+type Query {
+  books: [Book!]!
+  book(id: String!): Book!
+}
+
+type Mutation {
+  createBook(input: BookInput!): Book!
+  updateBook(id: String!, input: BookInput!): Book
+  deleteBook(id: String!): Boolean!
+}
+
+type Book {
+  id: String!
+  title: String!
+  author: String!
+  publishedYear: Int!
+}
+
+input BookInput {
+  title: String!
+  author: String!
+  publishedYear: Int!
+}
+
+# type Query {
+#   FetchBookById(id: String!): Book!
+#   FetchAllBooks: [Book!]!
+#   FetchAuthorById(id: String!): Author!
+#   FetchAllAuthors: [Author!]!
+#   FetchGenreById(id: String!): Genre!
+#   FetchAllGenres: [Genre!]!
+#   SearchBooks(query: String!): [Book!]!  #search by title or author name
+# }
+
+# type Mutation {
+#   CreateBook(input: BookInput!): Book!
+#   UpdateBook(id: String!, input: UpdateBookInput!): Book!
+#   DeleteBook(id: String!): Boolean!
+#   CreateAuthor(input: AuthorInput!): Author!
+#   CreateGenre(input: GenreInput!): Genre!
+# }
+
+# type Book {
+#   id: String!
+#   title: String!
+#   authorId: String!
+#   genreId: String!
+# }
+
+# type Author {
+#   id: String!
+#   name: String!
+#   books: [String!]!
+
+# }
+
+# type Genre {
+#   id: String!
+#   name: String!
+#   books: [String!]!
+# }
+
+# input BookInput {
+#   title: String!
+#   authorId: String!
+#   genreId: String!
+# }
+# input UpdateBookInput {
+#   title: String!
+#   authorId: String!
+#   genreId: String!
+# }
+# input AuthorInput {
+#   name: String!
+# }
+
+# input GenreInput {
+#   name: String!
+# }
+
