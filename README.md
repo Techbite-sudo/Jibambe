@@ -190,4 +190,3 @@ If an error occurs during the execution of a query or mutation, the API will ret
 
 This project is licensed under the [MIT License](LICENSE).
 
-Feel free to modify or extend this README file according to your specific requirements or additional features you might have in your API.
